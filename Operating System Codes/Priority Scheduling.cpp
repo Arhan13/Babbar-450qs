@@ -69,7 +69,6 @@ void priorityScheduling(Process proc[], int n)
         cout << proc[i].pid << " ";
     averageTime(proc, n);
 }
-
 int main()
 {
     //pid bt priority
