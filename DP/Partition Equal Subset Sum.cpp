@@ -1,6 +1,6 @@
 bool canPartition(vector<int> &nums)
 {
-    int   sum = 0;
+    int sum = 0;
     for (auto x : nums)
     {
         sum += x;
@@ -9,7 +9,6 @@ bool canPartition(vector<int> &nums)
     {
         return false;
     }
-
 
     bool table[(sum / 2) + 1][nums.size() + 1];
     for (int i = 0; i <= nums.size(); i++)
@@ -27,7 +26,7 @@ bool canPartition(vector<int> &nums)
             table[i][j] = table[i][j - 1];
             if (i >= nums[j - 1])
             {
-                table[i][j] = table[i][j] || table[i - nums[j - 1]][j - 1];
+                //table[i][j] = table[i][j] || table[i - nums[j - 1]][j - 1];
             }
         }
     }
