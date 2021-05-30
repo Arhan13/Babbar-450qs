@@ -26,7 +26,7 @@ bool canPartition(vector<int> &nums)
             table[i][j] = table[i][j - 1];
             if (i >= nums[j - 1])
             {
-                //table[i][j] = table[i][j] || table[i - nums[j - 1]][j - 1];
+                table[i][j] = table[i][j] || table[i - nums[j - 1]][j - 1];
             }
         }
     }
