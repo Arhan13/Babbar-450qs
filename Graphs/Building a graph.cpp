@@ -20,18 +20,18 @@ public:
 			adjlist[v].push_back(make_pair(u, dist));
 	}
 
-	// void print_adj()
-	// {
-	// 	for (auto n : adjlist)
-	// 	{
-	// 		cout << n.first<<" : ";
-	// 			for (auto a : n.second )
-	// 		{
-	// 			cout <<"( "<<a.first<<" , "<<a.second<<" ) " ;
-	// 		}
-	// 			cout << endl;
-	// 	}
-	// }
+	void print_adj()
+	{
+		for (auto n : adjlist)
+		{
+			cout << n.first << " : ";
+			for (auto a : n.second)
+			{
+				cout << "( " << a.first << " , " << a.second << " ) ";
+			}
+			cout << endl;
+		}
+	}
 
 	void bfs(T u)
 	{
