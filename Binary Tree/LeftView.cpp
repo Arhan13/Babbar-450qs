@@ -1,17 +1,17 @@
-/* A binary tree node
+// A binary tree node
 
 struct Node
 {
     int data;
-    struct Node* left;
-    struct Node* right;
-    
-    Node(int x){
+    struct Node *left;
+    struct Node *right;
+
+    Node(int x)
+    {
         data = x;
         left = right = NULL;
     }
 };
- */
 
 void dfs(Node *root, int level, vector<int> &ans)
 {
